@@ -1,0 +1,35 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-owhestimatesysadmin-dev-123425-authRole",
+      "UnauthRoleArn": "arn:aws:iam::026635006820:role/amplify-owhestimatesysadmin-dev-123425-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::026635006820:role/amplify-owhestimatesysadmin-dev-123425-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-owhestimatesysadmin-dev-123425-deployment",
+      "UnauthRoleName": "amplify-owhestimatesysadmin-dev-123425-unauthRole",
+      "StackName": "amplify-owhestimatesysadmin-dev-123425",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:026635006820:stack/amplify-owhestimatesysadmin-dev-123425/0fc07c20-f13f-11ed-a9e9-0e4f89299d47",
+      "AmplifyAppId": "d2ctvk6il8pfoh",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-owhestimatesysadmin-dev-123425-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "owhestimatesysadminbe328930": {}
+      },
+      "function": {
+        "owhestimatesysadminbe328930PostConfirmation": {
+          "GROUP": "Users",
+          "deploymentBucketName": "amplify-owhestimatesysadmin-dev-123425-deployment",
+          "s3Key": "amplify-builds/owhestimatesysadminbe328930PostConfirmation-565936383932546a5959-build.zip"
+        },
+        "AdminQueries0a1765e7": {
+          "deploymentBucketName": "amplify-owhestimatesysadmin-dev-123425-deployment",
+          "s3Key": "amplify-builds/AdminQueries0a1765e7-4151564c345175677243-build.zip"
+        }
+      },
+      "api": {
+        "AdminQueries": {}
+      }
+    }
+  }
+}
