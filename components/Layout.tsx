@@ -34,7 +34,12 @@ const [ showAdmin, setShowAdmin ] = useState<boolean>(false)
             {showAdmin===true ?
             <div className="main">
                 <div className={styles.header}>
-header
+                    <ul className={styles.ul}>
+                        <li className={styles.li}>見積もりシステム管理</li>
+                        <li className={styles.li}><a href="/accounts/admins">管理者一覧</a></li>
+                        <li className={styles.li}><a href="/accounts/users">顧客一覧</a></li>
+                        <li className={styles.li}><a href="/products">商品管理</a></li>
+                    </ul>
                 </div>
                 <div className="content">
                     {children}

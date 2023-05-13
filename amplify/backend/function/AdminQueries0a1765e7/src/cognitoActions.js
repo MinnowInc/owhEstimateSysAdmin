@@ -244,6 +244,71 @@ async function signUserOut(username) {
   }
 }
 
+/* 追加（作成・更新・削除） */
+async function createUser(username, userAttributes) {
+  const params = {
+    UserPoolId: userPoolId,
+    Username: username,
+    UserAttributes: userAttributes,
+  };
+
+  console.log(`Attempting to create user ${username}`);
+
+  try {
+    const result = await cognitoIdentityServiceProvider
+      .adminCreateUser(params)
+      .promise();
+
+    return result;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+}
+
+// ユーザー更新処理
+async function updateUser(username, userAttributes) {
+  const params = {
+    UserPoolId: userPoolId,
+    Username: username,
+    UserAttributes: userAttributes,
+  };
+
+  console.log(`Attempting to update user ${username}`);
+
+  try {
+    const result = await cognitoIdentityServiceProvider
+      .adminUpdateUserAttributes(params)
+      .promise();
+
+    return result;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+}
+
+// ユーザー削除処理
+async function deleteUser(username) {
+  const params = {
+    UserPoolId: userPoolId,
+    Username: username,
+  };
+
+  console.log(`Attempting to delete user ${username}`);
+
+  try {
+    const result = await cognitoIdentityServiceProvider
+      .adminDeleteUser(params)
+      .promise();
+
+    return result;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+}
+
 module.exports = {
   addUserToGroup,
   removeUserFromGroup,
@@ -256,4 +321,7 @@ module.exports = {
   listGroupsForUser,
   listUsersInGroup,
   signUserOut,
+  createUser,
+  updateUser,
+  deleteUser,
 };
